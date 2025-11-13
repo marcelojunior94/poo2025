@@ -2,12 +2,15 @@ package job.marcelojunior.apps;
 
 // importa a classe Endereco do pacote auxs
 import job.marcelojunior.auxs.Cargo;
+// importa a classe Endereco do pacote auxs
 import job.marcelojunior.auxs.Endereco;
 // importa a classe Telefone do pacote auxs
 import job.marcelojunior.auxs.Profissao;
+// importa a classe Telefone do pacote auxs
 import job.marcelojunior.auxs.Telefone;
 // importa a classe Pessoa do pacote pessoas
 import job.marcelojunior.pessoas.Cliente;
+// importa a classe Funcionario do pacote pessoas
 import job.marcelojunior.pessoas.Funcionario;
 import job.marcelojunior.pessoas.Pessoa;
 // importa LocalDate para criar/manipular datas
@@ -115,11 +118,6 @@ public class Application {
             System.out.println("Opção inválida. Por favor, selecione 1 ou 2.");
             return; // Encerra o programa se a opção for inválida
         }
-
-
-
-
-
 
     }
 }
