@@ -12,6 +12,7 @@ import job.marcelojunior.pessoas.Funcionario;
 import job.marcelojunior.pessoas.Pessoa;
 // importa LocalDate para criar/manipular datas
 import java.time.LocalDate; // adicionado
+import java.util.Scanner;
 
 // declara a classe Application que contém o metodo main
 public class Application {
@@ -63,41 +64,62 @@ public class Application {
 //
 
 
+        Scanner sc = new Scanner(System.in);
         //ATIVIDADE
 
         //Criar menu para escolher Funcionário ou Cliente
 
-        //Cadastrar um Funcionário - Criar o objeto funcionario1 e definir os seus atributos
-        Funcionario funcionario1 = new Funcionario();
-        funcionario1.setMatricula(1001);
-        funcionario1.setNome("Marcelo Junior");
-        funcionario1.setDataNascimento(LocalDate.of(1994, 8, 20));
-        funcionario1.setEndereco(new Endereco("Av Oceano Pacifico", "Apt",
-                "1240", "Intermares", "Cabedelo", "58102-236"));
-        funcionario1.setTelsContato(new Telefone("83", "987644188"));
-        funcionario1.setCargo(new Cargo("Designer"));
-        funcionario1.setSalario(1500.00);
-        funcionario1.setDataAdmissao(LocalDate.of(2018, 2,20));
+        System.out.println("=====MENU DE CADASTRO=====");
+        System.out.println("1 - Cadastrar Funcionário");
+        System.out.println("2 - Cadastrar Cliente");
+        System.out.print("\nDigite um número para selecionar o tipo de cadastro: ");
+        int numCadastro = sc.nextInt();
 
 
-        //Imprimir os dados do Funcionário cadastrado
-        System.out.println("=====DADOS DO FUNCIONÁRIO=====");
-        System.out.println(funcionario1.toString());
+        if(numCadastro == 1){
+            //Cadastrar um Funcionário - Criar o objeto funcionario1 e definir os seus atributos
+            System.out.println();
+            Funcionario funcionario1 = new Funcionario();
+            funcionario1.setMatricula(1001);
+            funcionario1.setNome("Marcelo Junior");
+            funcionario1.setDataNascimento(LocalDate.of(1994, 8, 20));
+            funcionario1.setEndereco(new Endereco("Av Oceano Pacifico", "Apt",
+                    "1240", "Intermares", "Cabedelo", "58102-236"));
+            funcionario1.setTelsContato(new Telefone("83", "987644188"));
+            funcionario1.setCargo(new Cargo("Designer"));
+            funcionario1.setSalario(1500.00);
+            funcionario1.setDataAdmissao(LocalDate.of(2018, 2,20));
 
 
-        //Cadastrar um Cliente - Criar o objeto cliente1 e definir os seus atributos
-        Cliente cliente1 = new Cliente();
-        cliente1.setCodigo("501");
-        cliente1.setNome("Raquel Benaion");
-        cliente1.setDataNascimento(LocalDate.of(1996, 01, 11));
-        cliente1.setEndereco(new Endereco("Conjunto Maguari", "Alameda 8",
-                "14", "Coqueiro", "Belém", "66823-068"));
-        cliente1.setTelsContato(new Telefone("91",  "9293-0090"));
-        cliente1.setProfissao(new Profissao("Secretária"));
+            //Imprimir os dados do Funcionário cadastrado
+            System.out.println("=====DADOS DO FUNCIONÁRIO=====");
+            System.out.println(funcionario1.toString());
 
-        System.out.println();
-        System.out.println("=====DADOS DO CLIENTE=====");
-        System.out.println(cliente1.toString());
+        }else if(numCadastro == 2){
+            //Cadastrar um Cliente - Criar o objeto cliente1 e definir os seus atributos
+            System.out.println();
+            Cliente cliente1 = new Cliente();
+            cliente1.setCodigo("501");
+            cliente1.setNome("Raquel Benaion");
+            cliente1.setDataNascimento(LocalDate.of(1996, 01, 11));
+            cliente1.setEndereco(new Endereco("Conjunto Maguari", "Alameda 8",
+                    "14", "Coqueiro", "Belém", "66823-068"));
+            cliente1.setTelsContato(new Telefone("91",  "9293-0090"));
+            cliente1.setProfissao(new Profissao("Secretária"));
+
+
+            System.out.println("=====DADOS DO CLIENTE=====");
+            System.out.println(cliente1.toString());
+
+        }else{
+            System.out.println("Opção inválida. Por favor, selecione 1 ou 2.");
+            return; // Encerra o programa se a opção for inválida
+        }
+
+
+
+
+
 
     }
 }
