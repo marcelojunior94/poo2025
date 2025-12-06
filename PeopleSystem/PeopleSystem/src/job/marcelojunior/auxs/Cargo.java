@@ -4,7 +4,6 @@ public class Cargo {
 
     private String nomeCargo;
 
-
     public Cargo(String nomeCargo) {
         this.nomeCargo = nomeCargo;
     }

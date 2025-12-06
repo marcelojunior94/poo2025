@@ -1,6 +1,7 @@
 package job.marcelojunior.pessoas;
 
 import job.marcelojunior.auxs.Cargo;
+import job.marcelojunior.estruturas.ListaDeTelefonesNaoOrdenados;
 
 import java.time.LocalDate;
 
@@ -67,12 +68,12 @@ public class Funcionario extends Pessoa{
     public String toString() {
         return
                 "\nMatrícula: " + matricula +
-                "\nCargo: " + cargo.getNomeCargo() +
-                "\nSalário: R$" + salario +
-                "\nData de Admissão: " + dataAdmissao +
-                "\nNome: " + nome +
-                "\nData de Nascimento: " + dataNascimento +
-                "\nTelefone: (" + telsContato.getDdd() +") " + telsContato.getNumTelefone() +
-                "\nEndereco: " + endereco.getLogradouro() + ", " + endereco.getNumero() + ", " + endereco.getBairro() + ", " + endereco.getCidade() + ", " + endereco.getCep();
+                        "\nCargo: " + cargo.getNomeCargo() +
+                        "\nSalário: R$" + salario +
+                        "\nData de Admissão: " + dataAdmissao +
+                        "\nNome: " + nome +
+                        "\nData de Nascimento: " + dataNascimento +
+                        "\nLista de telefone: " + telsContato +
+                        "\nEndereco: " + endereco.getLogradouro() + ", " + endereco.getNumero() + ", " + endereco.getBairro() + ", " + endereco.getCidade() + ", " + endereco.getCep();
     }
 }

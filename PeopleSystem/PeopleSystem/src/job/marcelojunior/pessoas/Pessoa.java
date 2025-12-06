@@ -1,14 +1,19 @@
 package job.marcelojunior.pessoas;
 
 import job.marcelojunior.auxs.*;
+import job.marcelojunior.estruturas.ListaDeTelefonesNaoOrdenados;
+
 import java.time.LocalDate;
 import java.time.Period; // adicionada a importação
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pessoa {
 
     protected String nome;
     protected LocalDate dataNascimento;
-    protected Telefone telsContato;
+    //    protected ListaDeTelefonesNaoOrdenados telsContato;
+    protected List<Telefone> telsContato = new ArrayList<>();
     protected Endereco endereco;
 
     public int obterIdade(){
@@ -37,12 +42,12 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public Telefone getTelsContato() {
+    public List<Telefone> getTelsContato() {
         return telsContato;
     }
 
-    public void setTelsContato(Telefone telsContato) {
-        this.telsContato = telsContato;
+    public void adicionarTelefone(Telefone telefone) {
+        this.telsContato.add(telefone);
     }
 
     public Endereco getEndereco() {

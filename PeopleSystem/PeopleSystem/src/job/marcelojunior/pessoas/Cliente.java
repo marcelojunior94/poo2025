@@ -35,10 +35,10 @@ public class Cliente extends Pessoa {
     public String toString() {
         return
                 "\nCódigo: " + codigo +
-                "\nProfissão: " + profissao.getNomeProfissao() +
-                "\nNome: " + nome +
-                "\nData de Nascimento: " + dataNascimento +
-                "\nTelefone: (" + telsContato.getDdd() + ") " + telsContato.getNumTelefone() +
-                "\nEndereço: " + endereco.getLogradouro() + ", " + endereco.getNumero() + ", " + endereco.getBairro() + ", " + endereco.getCidade() + ", " + endereco.getCep();
+                        "\nProfissão: " + profissao.getNomeProfissao() +
+                        "\nNome: " + nome +
+                        "\nData de Nascimento: " + dataNascimento +
+                        "\nTelefone: (" + telsContato +
+                        "\nEndereço: " + endereco.getLogradouro() + ", " + endereco.getNumero() + ", " + endereco.getBairro() + ", " + endereco.getCidade() + ", " + endereco.getCep();
     }
 }
